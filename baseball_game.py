@@ -57,11 +57,10 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    result = False
     temp = int(user_input_number)
     if temp > 99 and temp < 1000:
         result = True
-    else:
-        result = False
     # ==================================
     return result
 
@@ -91,7 +90,7 @@ def is_duplicated_number(three_digit):
     temp = str(three_digit)
     
     result = False
-    for i in range(len(temp)-1):
+    for i in range(len(temp)-1): # or use set()
         for j in temp[i+1:]:
             if temp[i] == j:
                 result = True
@@ -122,12 +121,11 @@ def is_validated_number(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    result = False
     if is_digit(user_input_number) and \
         is_between_100_and_999(user_input_number) and \
             not is_duplicated_number(user_input_number):
         result = True
-    else:
-        result = False
     # ==================================
     return result
 
@@ -230,10 +228,9 @@ def is_yes(one_more_input):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    if one_more_input.upper() == "Y" or one_more_input.upper() == "YES":
+    result = False
+    if one_more_input.upper() in ['Y','YES']:
         result = True
-    else:
-        result = False
     # ==================================
     return result
 
@@ -264,10 +261,9 @@ def is_no(one_more_input):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    if one_more_input.upper() == "N" or one_more_input.upper() == "NO":
+    result = False
+    if one_more_input.upper() in ['N', 'NO']:
         result = True
-    else:
-        result = False
     # ==================================
     return result
 
@@ -293,14 +289,14 @@ def main():
                         answer = input('You win, one more(Y/N)? ')
                         if is_yes(answer):
                             break
-                        elif is_no(answer) or answer == "0":
+                        elif is_no(answer) or answer == str(0):
                             Game = False
                             break
                         else:
                             print('Wrong input')
                             continue
                 break
-            elif answer == "0":
+            elif answer == str(0):
                 Game = False
                 break
             else:
