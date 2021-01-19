@@ -289,14 +289,14 @@ def main():
                         answer = input('You win, one more(Y/N)? ')
                         if is_yes(answer):
                             break
-                        elif is_no(answer) or answer == str(0):
+                        elif is_no(answer):# or answer == '0':
                             Game = False
                             break
                         else:
                             print('Wrong input, Input again')
                             continue
                 break
-            elif answer == str(0):
+            elif answer == '0':
                 Game = False
                 break
             else:
