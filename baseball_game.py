@@ -58,8 +58,10 @@ def is_between_100_and_999(user_input_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     result = False
+    
     temp = int(user_input_number)
-    if temp > 99 and temp < 1000:
+
+    if temp >= 100 and temp < 1000:
         result = True
     # ==================================
     return result
@@ -155,8 +157,9 @@ def get_not_duplicated_three_digit_number():
     while True:
         result = get_random_number()
         if not is_duplicated_number(result):
-            return result
+            break
     # ==================================
+    return result
 
 
 def get_strikes_or_ball(user_input_number, random_number):
@@ -274,6 +277,7 @@ def main():
     # 위의 코드를 포함하여 자유로운 수정이 가능함
     strike = 0
     ball = 0
+    
     Game = True
     while Game:
         random_number = str(get_not_duplicated_three_digit_number())
@@ -293,14 +297,14 @@ def main():
                             Game = False
                             break
                         else:
-                            print('Wrong input')
+                            print('Wrong input !')
                             continue
                     break
             elif answer == '0':
                 Game = False
                 break
             else:
-                print('Wrong input')
+                print('Wrong input !')
                 continue
     # ==================================
     print("Thank you for using this program")
