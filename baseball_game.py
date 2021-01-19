@@ -293,14 +293,14 @@ def main():
                             Game = False
                             break
                         else:
-                            print('Wrong input')
+                            print('Wrong input, Input again')
                             continue
                 break
             elif answer == str(0):
                 Game = False
                 break
             else:
-                print('Wrong input')
+                print('Wrong input, Input again')
                 continue
     # ==================================
     print("Thank you for using this program")
