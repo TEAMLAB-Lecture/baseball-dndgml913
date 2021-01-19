@@ -288,7 +288,7 @@ def main():
             answer = input('Input guess number : ')
             if is_validated_number(user_input):
                 strike, ball = get_strikes_or_ball(user_input, random_number)
-                print(f"Strikes : {strike} , Balls : {ball}":strike, ball)
+                print(f"Strikes : {strike} , Balls : {ball}")
                 if strike == 3:
                     while True:
                         answer = input('You win, one more(Y/N)? ')
