@@ -196,7 +196,7 @@ def get_strikes_or_ball(user_input_number, random_number):
     for i in range(len(user_digits)):
         if user_digits[i] == random_digits[i]:
             strike += 1
-        elif user_digits[i] is in set(random_digits).remove(user_digits[i]):
+        elif user_digits[i] in set(random_digits).remove(user_digits[i]):
             ball += 1
 
     result = [strike, ball]
