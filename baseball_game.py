@@ -297,14 +297,14 @@ def main():
                             Game = False
                             break
                         else:
-                            print('WRONG INPUT')
+                            print('Wrong input')
                             continue
                 break
             elif answer == "0":
                 Game = False
                 break
             else:
-                print('WRONG INPUT')
+                print('Wrong input')
                 continue
     # ==================================
     print("Thank you for using this program")
