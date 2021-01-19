@@ -88,13 +88,13 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    temp = list(three_digit)
+    temp = str(three_digit)
         
-    duplication = False
+    result = False
     for i in range(len(temp)-1):
         for j in temp[i:]:
             if temp[i] == j:
-                duplication = True
+                result = True
                 break
     # ==================================
     return result
@@ -187,11 +187,10 @@ def get_strikes_or_ball(user_input_number, random_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    user_digits = list(user_input_number)
-    random_digits = list(random_number)
+    user_digits = str(user_input_number)
+    random_digits = str(random_number)
     strike = 0
     ball = 0
-    temp = []
 
     for i in range(len(user_digits)):
         if user_digits[i] == random_digits[i]:
@@ -286,8 +285,8 @@ def main():
         answer = ''
         while True:
             answer = input('Input guess number : ')
-            if is_validated_number(user_input):
-                strike, ball = get_strikes_or_ball(user_input, random_number)
+            if is_validated_number(answer):
+                strike, ball = get_strikes_or_ball(answer, random_number)
                 print(f"Strikes : {strike} , Balls : {ball}")
                 if strike == 3:
                     while True:
