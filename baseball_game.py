@@ -289,18 +289,18 @@ def main():
                         answer = input('You win, one more(Y/N)? ')
                         if is_yes(answer):
                             break
-                        elif is_no(answer):# or answer == '0':
+                        elif is_no(answer) or answer == '0':
                             Game = False
                             break
                         else:
-                            print('Wrong input, Input again')
+                            print('Wrong input')
                             continue
-                break
+                    break
             elif answer == '0':
                 Game = False
                 break
             else:
-                print('Wrong input, Input again')
+                print('Wrong input')
                 continue
     # ==================================
     print("Thank you for using this program")
