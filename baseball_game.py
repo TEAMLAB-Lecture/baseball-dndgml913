@@ -122,8 +122,7 @@ def is_validated_number(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    if is_digit(user_input_number) \
-        and is_between_100_and_999(user_input_number):
+    if is_digit(user_input_number) and is_between_100_and_999(user_input_number):
         result = True
     else:
         result = False
@@ -197,8 +196,7 @@ def get_strikes_or_ball(user_input_number, random_number):
     for i in range(len(user_digits)):
         if user_digits[i] == random_digits[i]:
             strike += 1
-        elif user_digits[i] is in \
-            set(random_digits).remove(user_digits[i]):
+        elif user_digits[i] is in set(random_digits).remove(user_digits[i]):
             ball += 1
 
     result = [strike, ball]
